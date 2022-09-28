@@ -1,0 +1,31 @@
+<h1>titles works!</h1>
+<!--<h2>Hello {{nombre}} {{apellido}}</h2>
+<h2>Hello {{persona.nombre}} {{persona.apellido}}</h2>
+
+<br>
+<input type="text" name="" id="nombre" [value]="persona.nombre">
+<br>
+<input type="text" name="" id="nombreObject" [(ngModel)]="nombre">
+<p>{{nombre}}</p>-->
+<label for="">correo
+    <!--ngModelChange-->
+    <input type="text" name="" id="correo" (ngModelChange)="AsignaUsuario()" [(ngModel)]="correo">
+    <!--<input type="text" name="" id="correo" (input)="AsignaUsuario()" [(ngModel)]="correo">-->
+</label>
+<br>
+<label for="">Contraseña
+    <input type="password" name="" id="pass" [(ngModel)]="password" (keyup)="eventdblclick($event)">
+
+</label>
+
+<br>
+<h4>Usuario - {{usuario}}</h4>
+<br>
+<button (click)="Iniciar()">Iniciar</button>
+<button (dblclick)="eventdblclick($event)">dblclick</button>
+<input type="text" (focus)="StyleFocus($event)"> 
+<br>
+<img (mouseenter)="bigImage($event)" (mouseleave)="tinyImage($event)" src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" >
+
+
+

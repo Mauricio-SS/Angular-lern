@@ -1,0 +1,34 @@
+<!--<div *ngIf="!cargando">
+    <h1>Bienvenido</h1>
+</div>
+
+<img *ngIf="cargando" src="https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif" alt="">--> 
+
+<div *ngFor="let producto of productos" class="producto">
+    <p>Producto:{{producto.nombre}}</p>
+    <p [ngClass]="{'DangerColor' : producto.stock < 5}">Stock: {{producto.stock}}
+        <span *ngIf="producto.stock < 5" [ngClass]="{'DangerColor' : producto.stock < 5}"> Casi se agotan! </span>
+    </p>
+
+    <p>Distribuidor: {{producto.distribuidor}}</p>
+    <p>Caducidad: {{producto.caducidad}}</p>
+</div>
+
+<div class="tab" [ngSwitch]="tab">
+    <button (click)="cambiaTab('')">Home</button>
+    <button (click)="cambiaTab('perfil')">Perfil</button>
+    <button (click)="cambiaTab('puntos')">Puntos</button>
+    <button (click)="cambiaTab('info')">Info</button>
+    <button (click)="cambiaModo()">Modo oscuro</button>
+
+    <div class="tabContent" [ngClass]="{ 'darkMode' : modo }">
+        <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+        <p *ngSwitchCase="'puntos'">Estos son los puntos</p>
+        <p *ngSwitchCase="'info'">Esta es la info</p>
+        <p *ngSwitchDefault>Seleccione una pestaña</p>
+    </div>
+
+</div>
+
+
+
