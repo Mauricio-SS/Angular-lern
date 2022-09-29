@@ -107,7 +107,7 @@
       }
     }
   },
-  "defaultProject": "HelloWorld",
+  "defaultProject": "Angular-lern",
   "cli": {
     "analytics": false
   }
