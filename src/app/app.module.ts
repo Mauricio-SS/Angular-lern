@@ -8,6 +8,8 @@ import  {FormsModule, NgModel} from '@angular/forms';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { TextFormatPipe } from './text-format.pipe';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PipesComponent } from './pipes/pipes.component';
     TitlesComponent,
     DirectivaComponent,
     EjemploComponent,
-    PipesComponent
+    PipesComponent,
+    TextFormatPipe,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
