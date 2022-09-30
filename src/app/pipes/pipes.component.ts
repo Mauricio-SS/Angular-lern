@@ -13,6 +13,8 @@ export class PipesComponent implements OnInit {
   ganancias : number = 0.54
   fecha : Date = new Date('06-1-2019')
 
+  textoLargo : string = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam praesentium aliquid assumenda architecto laborum omnis temporibus saepe dignissimos. Laboriosam earum quasi corporis voluptate odit dolores alias officiis id eius iusto'
+
   constructor() { }
 
   ngOnInit(): void {
