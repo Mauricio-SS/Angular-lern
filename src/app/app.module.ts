@@ -10,6 +10,10 @@ import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { TextFormatPipe } from './text-format.pipe';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AgregarUsuariosComponent } from './usuarios/agregar-usuarios/agregar-usuarios.component';
+import { ActualizarUsuariosComponent } from './usuarios/actualizar-usuarios/actualizar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     EjemploComponent,
     PipesComponent,
     TextFormatPipe,
-    ErrorPageComponent
+    ErrorPageComponent,
+    EncabezadoComponent,
+    UsuariosComponent,
+    AgregarUsuariosComponent,
+    ActualizarUsuariosComponent
   ],
   imports: [
     BrowserModule,
