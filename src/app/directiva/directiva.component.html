@@ -1,34 +1,58 @@
-<!--<div *ngIf="!cargando">
-    <h1>Bienvenido</h1>
-</div>
 
-<img *ngIf="cargando" src="https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif" alt="">--> 
-
-<div *ngFor="let producto of productos" class="producto">
-    <p>Producto:{{producto.nombre}}</p>
-    <p [ngClass]="{'DangerColor' : producto.stock < 5}">Stock: {{producto.stock}}
-        <span *ngIf="producto.stock < 5" [ngClass]="{'DangerColor' : producto.stock < 5}"> Casi se agotan! </span>
-    </p>
-
-    <p>Distribuidor: {{producto.distribuidor}}</p>
-    <p>Caducidad: {{producto.caducidad}}</p>
-</div>
-
-<div class="tab" [ngSwitch]="tab">
-    <button (click)="cambiaTab('')">Home</button>
-    <button (click)="cambiaTab('perfil')">Perfil</button>
-    <button (click)="cambiaTab('puntos')">Puntos</button>
-    <button (click)="cambiaTab('info')">Info</button>
-    <button (click)="cambiaModo()">Modo oscuro</button>
-
-    <div class="tabContent" [ngClass]="{ 'darkMode' : modo }">
-        <p *ngSwitchCase="'perfil'">Este es el perfil</p>
-        <p *ngSwitchCase="'puntos'">Estos son los puntos</p>
-        <p *ngSwitchCase="'info'">Esta es la info</p>
-        <p *ngSwitchDefault>Seleccione una pestaña</p>
+<div class="container-fluid" *ngIf="cargando">
+  <div class="row m-0 vh-100 justify-content-center align-items-center">
+    <div class="col-auto p-5 text-center">
+      <img
+        src="https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif"
+        class="img-fluid"
+        alt="img-fluid"
+      />
     </div>
-
+  </div>
 </div>
+<div *ngIf="!cargando">
+  <div class="container">
+    <div class="row">
+      <div class="card col-3 mt-4 mx-1" *ngFor="let producto of productos">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text" [ngClass]="{ DangerColor: producto.stock < 5 }">
+            Stock: {{ producto.stock }}
+            <span
+              *ngIf="producto.stock < 5"
+              [ngClass]="{ DangerColor: producto.stock < 5 }"
+            >
+              Casi se agotan!
+            </span>
+          </p>
+          <p class="card-text">Distribuidor: {{ producto.distribuidor }}</p>
+          <p class="card-text">Caducidad: {{ producto.caducidad | date : 'mediumDate' }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6 d-flex justify-content-center " [ngSwitch]="tab">
+          <div class="card">
+            <div class="card-header ">
+              <button class="btn btn-primary mx-1" (click)="cambiaTab('')">Home</button>
+              <button class="btn btn-primary mx-1" (click)="cambiaTab('perfil')">Perfil</button>
+              <button class="btn btn-primary mx-1" (click)="cambiaTab('puntos')">Puntos</button>
+              <button class="btn btn-primary mx-1" (click)="cambiaTab('info')">Info</button>
+              <button class="btn btn-primary mx-1" (click)="cambiaModo()">Modo oscuro</button>
+            </div>
+            <div class="card-body">
+              <div class="tabContent" [ngClass]="{ 'darkMode' : modo }">
+                <p class="card-text" *ngSwitchCase="'perfil'">Este es el perfil</p>
+                <p class="card-text" *ngSwitchCase="'puntos'">Estos son los puntos</p>
+                <p class="card-text" *ngSwitchCase="'info'">Esta es la info</p>
+                <p class="card-text" *ngSwitchDefault>Seleccione una pestaña</p>
+            </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
 
 
 

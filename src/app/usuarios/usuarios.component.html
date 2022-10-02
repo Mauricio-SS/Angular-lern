@@ -1,1 +1,25 @@
-<p>usuarios works!</p>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col">
+            <h1 class="display-3 mt-3 mb-3 text-center">Panel de control de usuarios</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col text-center">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnGroupRadio" id="btnRadio1" autocomplete="off" routerLink="/usuarios/agregar">
+                <label class="btn btn-outline-secondary" for="btnRadio1">Agregar usuario</label>
+              
+                <input type="radio" class="btn-check" name="btnGroupRadio" id="btnRadio2" autocomplete="off" routerLink="/usuarios/actualizar">
+                <label class="btn btn-outline-secondary" for="btnRadio2">Editar usuario</label>
+              
+
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

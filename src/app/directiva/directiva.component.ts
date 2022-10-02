@@ -47,7 +47,7 @@ export class DirectivaComponent implements OnInit {
 
     setTimeout(() => {
       this.cargando = false;
-    }, 5000);
+    }, 3000);
 
   }
 
