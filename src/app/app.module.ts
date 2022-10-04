@@ -17,6 +17,8 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AgregarUsuariosComponent } from './usuarios/agregar-usuarios/agregar-usuarios.component';
 import { ActualizarUsuariosComponent } from './usuarios/actualizar-usuarios/actualizar-usuarios.component';
+import { ArticuloComponent } from './articulo/articulo.component';
+import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ActualizarUsuariosComponent } from './usuarios/actualizar-usuarios/actu
     EncabezadoComponent,
     UsuariosComponent,
     AgregarUsuariosComponent,
-    ActualizarUsuariosComponent
+    ActualizarUsuariosComponent,
+    ArticuloComponent,
+    ArticuloDetalleComponent
   ],
   imports: [
     BrowserModule,

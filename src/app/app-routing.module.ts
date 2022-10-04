@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
+import { ArticuloComponent } from './articulo/articulo.component';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -22,6 +24,8 @@ const routes: Routes = [
       path : 'actualizar', component: ActualizarUsuariosComponent
     }
   ] },
+  {path : 'articulo', component: ArticuloComponent},
+  {path : 'articulo-detalle/:nombre', component: ArticuloDetalleComponent},
   { path : '**', component: ErrorPageComponent}
 ];
 
