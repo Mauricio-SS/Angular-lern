@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col ">
+            <div class="articulo" *ngFor="let articulo of articulos">
+                
+                <h4>Nombre: {{articulo.nombre}}</h4>
+                <p>Descripción {{articulo.descripcion}}</p>
+                <h5>Precio: {{articulo.precio | currency}}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
